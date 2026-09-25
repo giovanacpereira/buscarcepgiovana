@@ -36,7 +36,7 @@ async function buscarCep() {
         //CEP digitado é colocado no final da URL 
 
         const resposta = await fetch(
-            https://brasilapi.com.br/api/cep/v1/${cep}
+            `https://brasilapi.com.br/api/cep/v1/${cep}`
         );
 
         if (!resposta.ok){
@@ -69,10 +69,10 @@ async function buscarCep() {
 
         <p><strong>Estado</strong>
         ${dados.state}</p>`
- ;
+ `;`
     } catch (erro) {
 
-        resultado.innerHTML = <p>CEP não encontrado ou erro na consulta</p>;
+        resultado.innerHTML = `<p>CEP não encontrado ou erro na consulta</p>`;
 
     }
 }
